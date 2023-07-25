@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  margin: 0;
 }
 
 h2 {
@@ -36,9 +37,17 @@ main img {
 
 /* ---  Groups & Items --- */
 
+.wrapper {
+  width: 100%;
+}
+
 .group {
   display: flex;
   flex-direction: column;
+}
+
+.group img {
+  width: 100%;
 }
 
 .item {
@@ -48,6 +57,17 @@ main img {
 
 .item-double {
   flex: 2;
+display: flex;
+
+}
+
+.idea-item img {
+  width: 100%;
+}
+
+.idea-container img{
+display: flex;
+flex-direction: column;
 }
 
 /* -------  Navigation ------- */
@@ -56,16 +76,27 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+
+}
+header nav {
+  display: flex;
+  justify-content: center;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav ul {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
 }
 
 header nav ul li a {
@@ -74,15 +105,20 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
 /* -------  Search Form ------- */
 form {
+  margin: 0;
   border: 2px solid #ff385c;
   padding: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 form label {
@@ -91,6 +127,7 @@ form label {
 
 form select,
 form input {
+  justify-content: center;
   margin-bottom: 20px;
   width: 180px;
 }
@@ -117,3 +154,69 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 1050px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .logo {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    margin-top: 8px;
+    align-self: center;
+  }
+
+  header nav ul li a:hover {
+    color: #5c5656;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .idea-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+  
+  
+  .idea-item img {
+  width: 100%;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+  
+  .container{
+    align-content: flex-start;
+  }
+
+  .group {
+    display: flex;
+    justify-items: center;
+  }
+
+  .item-double{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+} 
