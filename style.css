@@ -57,8 +57,6 @@ main img {
 
 .item-double {
   flex: 2;
-display: flex;
-
 }
 
 .idea-item img {
@@ -154,12 +152,23 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 1050px) {
+@media all and (min-width: 480px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px;
+    align-content: center;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item-double {
+    display: flex;
+    align-items: center;
   }
 
   .logo {
@@ -169,7 +178,7 @@ footer p {
 
   header nav {
     margin-top: 8px;
-    align-self: center;
+    align-items: center;
   }
 
   header nav ul li a:hover {
@@ -211,12 +220,5 @@ footer p {
 
   .group {
     display: flex;
-    justify-items: center;
-  }
-
-  .item-double{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 } 
