@@ -127,7 +127,7 @@ form select,
 form input {
   justify-content: center;
   margin-bottom: 20px;
-  width: 180px;
+  width: 150px;
 }
 
 form button {
@@ -152,7 +152,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 768px) {
   header {
     display: flex;
     flex-direction: row;
@@ -164,6 +164,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
 
   .item-double {
@@ -183,11 +184,6 @@ footer p {
 
   header nav ul li a:hover {
     color: #5c5656;
-  }
-
-  form div {
-    display: flex;
-    flex-direction: column;
   }
 
   form {
@@ -216,9 +212,29 @@ footer p {
   
   .container{
     align-content: flex-start;
+    width: 100%;
   }
 
-  .group {
+  form div {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+
+  form select,
+form input {
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
 } 
